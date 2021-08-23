@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>CRUD PROJECT</title>
+</head>
+<style>
+li{
+    list-style: none;
+
+
+}
+.insert{
+   background-color: aqua;
+   
+
+}
+.find{
+    background-color: aquamarine;
+}
+form{
+    margin-top: 40px;
+
+}
+.all{
+    background-color: cadetblue;
+}
+b{
+    font-size: 25px;
+}
+.search{
+    padding: 10px;
+    margin-bottom: 5px;
+    width: 70px;
+    background-color: black;
+    color: azure;
+}
+.alldata{
+    padding: 10px;
+    margin-bottom: 5px;
+    width: 70px;
+    background-color: black;
+    color: azure;
+}
+.insert2{
+    padding: 10px;
+    margin-bottom: 5px;
+    width: 70px;
+    background-color: black;
+    color: azure;
+}
+
+</style>
+<body >
+    <div class="insert">
+        <center><b>Insert Data</b></center>
+        <center>
+        <form action="InsertData" method="post" name="insertform">
+            <li>Id</li>
+    
+            <input type="text" name="id" placeholder="Enter ID">
+            <li>Name</li>
+            <input type="text" name="name" placeholder="Enter Name">
+            <li>State</li>
+            <input type="text" name="state" placeholder="Enter State">
+            <li>Email</li>
+            <input type="text" name="email" placeholder="Enter Email"> <br><br>
+            
+            <input type="submit" value="Insert" class="insert2" onclick="insert()">
+            </form>
+        </center>
+    </div>
+       <div class="find">
+           <center><b>Search Data</b></center>
+        <center>
+            <form action="DataFind" method="post" name="findform">
+                <li>ID :</li>
+              <input type="text" name="name" placeholder="Enter id to search"><br><br>
+                <input type="submit" value="Search" onclick="msg()" class="search" >
+                </form> 
+        </center>
+       </div>
+    
+   
+    
+    <div class="all">
+        <center><b>ALLData</b></center>
+        <center>
+              
+    <form action="AllData" method="post">
+      <li>All Data :</li>
+        <input type="submit" value="Data" class="alldata">
+        </form>
+    
+        </center>
+    </div>
+    
+	<script>
+	function msg(){
+        var x=document.findform.name.value;
+        if(isNaN(x)){
+            alert("Enter only Numeric value");
+            return false;
+        }
+    }
+    function insert(){
+        var name=document.insertform.name.value;
+        if(name==null||name==""){
+                alert("your name can't be null");
+                return false;
+            }
+    }
+    
+	</script>    
+    </body>
+</html>

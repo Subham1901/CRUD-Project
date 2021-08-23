@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>MyConnectionFinal</display-name>
+  <servlet>
+    <servlet-name>InsertData</servlet-name>
+    <servlet-class>com.insert.InsertData</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InsertData</servlet-name>
+    <url-pattern>/InsertData</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>DataFind</servlet-name>
+    <servlet-class>com.search.DataFind</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DataFind</servlet-name>
+    <url-pattern>/DataFind</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AllData</servlet-name>
+    <servlet-class>AllData</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AllData</servlet-name>
+    <url-pattern>/servlet/AllData</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>Edit</servlet-name>
+    <servlet-class>Edit</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Edit</servlet-name>
+    <url-pattern>/servlet/Edit</url-pattern>
+  </servlet-mapping>
+</web-app>
